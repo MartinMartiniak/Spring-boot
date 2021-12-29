@@ -20,7 +20,7 @@ public class EmployeeController {
 
     @GetMapping
     public String helloWorld(){
-        return "Hello World!";
+        return "available endpoints: /salary; /bonus; /snail; /pes;";
     }
 
     @RequestMapping(path="/salary")
@@ -40,4 +40,9 @@ public class EmployeeController {
     public double getTotalDistance(){
         return employeeService.totalDistance(height, lenght, total);
     }
+    @RequestMapping(path = "/pes")
+    public String macka(){
+        return "mačka";
+    }
+
 }
